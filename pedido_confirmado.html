@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedido Confirmado - Milo's Pizza</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    
+    <header>
+        <img src="img/logo.jpg" alt="Milo's Pizza Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html">Nuestro Menú</a></li>
+                <li><a href="contacto.html">Haz tu Pedido</a></li>
+                <li><a href="login.html">Acceder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <main class="form-container">
+        
+        <form id="ticket">
+            <h2>¡Pedido Confirmado!</h2>
+            
+            <p>Hola <strong id="res-cliente">Cliente</strong>, hemos recibido tu orden con éxito.</p>
+            
+            <hr>
+            
+            <!-- confirmación -->
+            <p><strong>Pizza:</strong> <span id="res-pizza"></span></p>
+            <p><strong>Cantidad:</strong> <span id="res-cant"></span> unidad(es)</p>
+            <p><strong>Subtotal:</strong> $<span id="res-sub"></span></p>
+            <p><strong>Descuento:</strong> -$<span id="res-desc"></span></p>
+            <p><strong>Total Neto a Pagar:</strong> $<span id="res-tot"></span></p>
+            
+            <hr>
+            
+            <!-- promoción -->
+            <p><em id="res-promo"></em></p>
+            
+            <!-- Botón para volver -->
+            <a href="index.html" class="btn" style="display: block; text-align: center; text-decoration: none; box-sizing: border-box;">Volver al Inicio</a>
+        </form>
+        
+    </main>
+
+    <!-- Tu footer original -->
+    <footer>
+        <p>&copy; 2026 Milo's Pizza - Calidad en cada rebanada</p>
+    </footer>
+
+    <!-- Script encargado de los datos que procesó el PHP -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        
+        document.getElementById('res-cliente').textContent = params.get('cliente') || 'Cliente';
+        document.getElementById('res-pizza').textContent = params.get('pizza') || '-';
+        document.getElementById('res-cant').textContent = params.get('cant') || '0';
+        document.getElementById('res-sub').textContent = parseFloat(params.get('sub') || 0).toFixed(2);
+        document.getElementById('res-desc').textContent = parseFloat(params.get('desc') || 0).toFixed(2);
+        document.getElementById('res-tot').textContent = parseFloat(params.get('tot') || 0).toFixed(2);
+        document.getElementById('res-promo').textContent = params.get('promo') || '';
+    </script>
+
+</body>
+</html>

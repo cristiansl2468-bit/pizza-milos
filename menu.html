@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Milo's Pizza</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <!-- Referencia al logo proporcionado -->
+        <img src="img/logo.jpg" alt="Milo's Pizza Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html">Nuestro Menú</a></li>
+                <li><a href="contacto.html">Haz tu Pedido</a></li>
+                <li><a href="login.html">Acceder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu-header">
+            <h1>Nuestras Especialidades</h1>
+            <p>Preparadas con masa artesanal e ingredientes de la más alta calidad.</p>
+        </section>
+
+        <!-- Requisito: Uso de listas e imágenes -->
+        <section class="menu-grid">
+            <article class="pizza-card">
+                <img src="img/pizza-pepperoni.jpg" alt="Pizza de Pepperoni" class="pizza-img">
+                <h3>Pepperoni Clásica</h3>
+                <p>Nuestra pizza estrella con doble porción de pepperoni y queso mozzarella fundido.</p>
+                <span class="price">$189.00</span>
+                <button class="btn">Agregar al Carrito</button>
+            </article>
+
+            <article class="pizza-card">
+                <img src="img/pizza-mexicana.jpg" alt="Pizza Mexicana" class="pizza-img">
+                <h3>Mexicana Especial</h3>
+                <p>Chorizo, jalapeño, cebolla y un toque de frijoles bayos. ¡El sabor de casa!</p>
+                <span class="price">$210.00</span>
+                <button class="btn">Agregar al Carrito</button>
+            </article>
+
+            <article class="pizza-card">
+                <img src="img/pizza-hawaiana.jpg" alt="Pizza Hawaiana" class="pizza-img">
+                <h3>Hawaiana Real</h3>
+                <p>Piña fresca seleccionada y jamón de pierna sobre nuestra salsa de tomate secreta.</p>
+                <span class="price">$195.00</span>
+                <button class="btn">Agregar al Carrito</button>
+            </article>
+        </section>
+
+        <section class="complementos">
+            <h2>Complementos y Bebidas</h2>
+            
+            <h3 class="tabla-titulo">Complementos</h3>
+            <table class="complementos-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Papas Gajo Sazonadas</td>
+                        <td>$65.00</td>
+                    </tr>
+                    <tr>
+                        <td>Alitas BBQ (6 piezas)</td>
+                        <td>$120.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="tabla-titulo">Bebidas</h3>
+            <table class="complementos-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Refresco Familiar 2L</td>
+                        <td>$45.00</td>
+                    </tr>
+                    <tr>
+                        <td>Refresco 600 ml</td>
+                        <td>$25.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Milo's Pizza - Calidad en cada rebanada</p>
+    </footer>
+</body>
+
+</html>
